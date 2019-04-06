@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Send Email</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="sendEmail()">
+  <ion-item>
+    <ion-label position="floating" [(ngModel)]="name" value="" required>Full Name</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" [(ngModel)]="email" value="" required>Email</ion-label>
+    <ion-input type="Email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" [(ngModel)]="phone" value="">Phone Number</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="primary"></ion-checkbox>
+    <ion-label> I agree to the Terms and Conditions</ion-label>
+  </ion-item>
+  
+  <ion-button (click)="sendEmail()" type="submit">Send</ion-button>
+  </form>
+</ion-content>
